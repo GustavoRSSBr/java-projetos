@@ -22,16 +22,22 @@ public class Program {
 		funcionario.nome = scan.nextLine();
 		System.out.print("Digite o salário bruto do funcionario: ");
 		funcionario.salarioBruto = scan.nextDouble();
-		System.out.println("Digite o imposto do salário: ");
+		System.out.print("Digite o imposto do salário: ");
 		funcionario.imposto = scan.nextDouble();
 
-		System.out.println("Nome: " + funcionario.nome + "\nSalário Liquido: " + funcionario.salarioLiquido());
+		System.out.println();
+
+		System.out.println("Nome: " + funcionario.nome + "\nSalário Liquido: R$ "
+				+ String.format("%.2f", funcionario.salarioLiquido()));
+
+		System.out.println("---------------------------------------");
 
 		System.out.print("Digite o aumento do salario (%): ");
 		funcionario.aumentarSalario(scan.nextDouble());
+		System.out.println();
 
-		System.out.println("Dados Atualizados! \nNome: " + funcionario.salarioLiquido() + "\nSalário Liquido: "
-				+ funcionario.salarioLiquido());
+		System.out.println("Dados Atualizados! \n-----------------\nNome: " + funcionario.nome + "\nSalário Liquido: R$ "
+				+ String.format("%.2f", funcionario.salarioLiquido()));
 
 		scan.close();
 
