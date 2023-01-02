@@ -14,4 +14,9 @@ public class Funcionario {
 		salarioBruto += ((salarioBruto * porcentagem) / 100);
 	}
 
+	@Override
+	public String toString() {
+		return "Nome: " + nome + "\nSalário Liquido: R$ " + String.format("%.2f", salarioLiquido());
+	}
+
 }

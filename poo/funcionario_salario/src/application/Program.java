@@ -10,7 +10,7 @@ public class Program {
 	/*
 	 * Ler os dados do funcionário (nome, salarioLiquido, imposto), em seguida
 	 * mostrar o nome e o salario Liquido do Funcionario; Depois digitar o valor que
-	 * deseja aumentar do salario em porcentagem e mostrar os dados atualizados.
+	 * deseja aumentar do salario em porcentagem e mostrar os dados atualizados(nome e salario liquido).
 	 */
 
 	public static void main(String[] args) {
@@ -27,17 +27,15 @@ public class Program {
 
 		System.out.println();
 
-		System.out.println("Nome: " + funcionario.nome + "\nSalário Liquido: R$ "
-				+ String.format("%.2f", funcionario.salarioLiquido()));
+		System.out.println(funcionario);
 
 		System.out.println("---------------------------------------");
 
 		System.out.print("Digite o aumento do salario (%): ");
 		funcionario.aumentarSalario(scan.nextDouble());
-		System.out.println();
+		System.out.println("---------------------------------------");
 
-		System.out.println("Dados Atualizados! \n-----------------\nNome: " + funcionario.nome + "\nSalário Liquido: R$ "
-				+ String.format("%.2f", funcionario.salarioLiquido()));
+		System.out.println("Dados Atualizados! \n\n" + funcionario);
 
 		scan.close();
 
