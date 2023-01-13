@@ -6,8 +6,8 @@ public class Program {
 
 	public static void main(String[] args) {
 		/*
-		 * Receba um valor N que vai definir o tamanho do Vetor, e preencha esse vetor
-		 * com numeros inteiros, depois imprima o vetor ordenado
+		 * Receba um valor N, que definirá o tamanho do vetor. Preencha esse vetor com
+		 * números inteiros e imprima o vetor ordenado.
 		 */
 
 		Scanner sc = new Scanner(System.in);
