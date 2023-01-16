@@ -7,9 +7,8 @@ import entities.Conta;
 public class Program {
 
 	public static void main(String[] args) {
-		// "Desenvolva um caixa eletrônico que, após a inserção do cartão, pergunte ao
-		// titular da conta se deseja realizar um saque ou um depósito. Ao finalizar a
-		// transação, exiba o saldo da conta."
+		// "Crie um caixa eletrônico que, após o usuário inserir o cartão, pergunte se
+		// deseja fazer um saque, um depósito ou ver o saldo."
 
 		Scanner sc = new Scanner(System.in);
 
@@ -20,7 +19,7 @@ public class Program {
 
 		while (n != 9) {
 			System.out.println("Menu Principal");
-			System.out.println("1 – Depositar\r\n" + "2 – Sacar\r\n" + "9 – Fim");
+			System.out.println("1 – Depositar\r\n" + "2 – Sacar\r\n" + "3 – Mostrar Saldo\r\n" + "9 – Fim");
 			System.out.print("Escolha uma opção: ");
 			n = sc.nextInt();
 
@@ -28,19 +27,14 @@ public class Program {
 				System.out.print("Digite o valor que deseja depositar: ");
 				double valor = sc.nextDouble();
 				c.depositar(valor);
-				System.out.println("\n" + c.toString());
 
 			} else if (n == 2) {
 				System.out.print("Digite o valor que sacar: ");
 				double valor = sc.nextDouble();
+				c.sacar(valor);
 
-				if (valor <= c.getSaldo()) {
-					c.sacar(valor);
-					System.out.println("\n" + c.toString());
-				} else {
-					System.out.println("\nSaldo insuficiente!");
-					System.out.println("\n" + c.toString());
-				}
+			} else if (n == 3) {
+				System.out.println("\n" + c.toString());
 			}
 
 		}
