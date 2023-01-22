@@ -57,7 +57,7 @@ public class Worker {
 		this.departament = departament;
 	}
 
-	public List<HourContract> getContract() {
+	public List<HourContract> getContracts() {
 		return contracts;
 	}
 
@@ -79,10 +79,12 @@ public class Worker {
 
 			if (c_year == year && c_month == month) {
 				sum += c.totalValue();
+
 			}
+
 		}
 
 		return sum;
-	}
 
+	}
 }
