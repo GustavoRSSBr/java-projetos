@@ -27,5 +27,11 @@ public class BusinessAccount extends Account {
 			System.out.println("Valor acima do limite da conta");
 		}
 	}
+	
+	@Override
+	public void withdraw(Double amount) {
+		super.withdraw(amount);
+		balance -= 2.0;
+	}
 
 }
