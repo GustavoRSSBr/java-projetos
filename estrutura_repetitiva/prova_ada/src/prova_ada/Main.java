@@ -45,9 +45,9 @@ public class Main {
 
 		} else if (salario > 3641.03 && salario <= 7087.22) {
 			resto = salario - 3641.03;
-			imposto += resto * 0.14 + (1212.00 * 0.075) + (0.09 * 1215.35) + (0.12 * 1212.68);
+			imposto += resto * 0.14 + (1212.00 * 0.075) + (0.09 * 1215.35) + (0.12 * 1213.68);
 		} else {
-			imposto = 1153.22;
+			imposto = 828.38;
 		}
 		System.out.printf("Ele pagou ao INSS R$ %.2f \n", imposto);
 		return imposto;
@@ -60,7 +60,6 @@ public class Main {
 
 		if (salario > 1903.98 && salario <= 2826.65) {
 			imposto += (salario - 1903.98) * 0.075;
-
 		} else if (salario > 2826.65 && salario <= 3751.05) {
 			resto = salario - 2826.65;
 			imposto += resto * 0.15 + (1903.98 * 0.075);
