@@ -7,7 +7,7 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 		Scanner sc = new Scanner(System.in);
-		SistemaProdutos jequiti = new SistemaProdutos();
+		SistemaProdutos sistema = new SistemaProdutos();
 
 		while (true) {
 			System.out.println("-----------------------------------");
@@ -24,23 +24,23 @@ public class Main {
 
 			switch (opcao) {
 			case 1:
-				jequiti.adicionarProduto();
+				sistema.adicionarProduto();
 				break;
 
 			case 2:
-				jequiti.buscarProduto();
+				sistema.buscarProduto();
 				break;
 
 			case 3:
-				jequiti.listarProdutos();
+				sistema.listarProdutos();
 				break;
 
 			case 4:
-				jequiti.atualizarProduto();
+				sistema.atualizarProduto();
 				break;
 
 			case 5:
-				jequiti.removerProduto();
+				sistema.removerProduto();
 				break;
 
 			case 0:
