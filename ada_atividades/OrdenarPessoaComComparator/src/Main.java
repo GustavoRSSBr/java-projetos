@@ -12,8 +12,8 @@ public class Main {
 		List<Pessoa> listaDeNomes = new ArrayList<>(
 				List.of(new Pessoa("Carlos", "Gerente"), new Pessoa("Ana", "chefe")));
 
-		Comparator<Pessoa> comparaNomeCargo = Comparator.comparing(Pessoa::getNome, String.CASE_INSENSITIVE_ORDER);
-		Collections.sort(listaDeNomes, comparaNomeCargo);
+		Comparator<Pessoa> comparaNomePessoa = Comparator.comparing(Pessoa::getNome, String.CASE_INSENSITIVE_ORDER);
+		Collections.sort(listaDeNomes, comparaNomePessoa);
 
 		System.out.println(listaDeNomes);
 	}
